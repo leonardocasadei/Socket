@@ -21,10 +21,11 @@ public class Server {
         System.out.println("Server in ascolto sulla porta  " + port);
         
         try{
+            System.out.println("CIAO");
             while(true){
                 Socket clientSocket=serverSocket.accept();
-                
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+                
                 out.println("Ciao client!");
                 clientSocket.close();
             }
